@@ -42,18 +42,17 @@ def check_line(x):
                 break
         else:
             print("Not in lines")
-            break
 
 
 def check_row(x):
     for i in range(3):
-        if x[0][i] == x[1][i] == x[2][i]:
+        if x[1][i] == x[0][i] == x[2][i]:
             while x[0][i] != 0:
                 print(x[i][0], " wins bcs of row!")
                 break
-        else:
-            print("Not in rows.")
-            break
+    else:
+        print("Not in rows.")
+
 
 
 def check_diagonal(x):
@@ -61,8 +60,8 @@ def check_diagonal(x):
         while x[1][1] != 0:
             print(x[1][1], " wins bcs of diagonal!")
             break
-    else:
-        print("Not in diagonal.")
+        else:
+            print("Not in diagonal.")
 
 
 def check_all(x):
