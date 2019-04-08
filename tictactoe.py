@@ -37,12 +37,11 @@ def create_board(size):
 def check_line(x):
     for i in range(3):
         if x[i][0] == x[i][1] == x[i][2]:
-            if x[i][0] != 0:
+            while x[i][0] != 0:
                 print(x[i][0], " wins bcs of line!")
                 break
             else:
                 continue
-            break
     else:
         print("Not in lines")
 
@@ -50,15 +49,13 @@ def check_line(x):
 def check_row(x):
     for i in range(3):
         if x[0][i] == x[1][i] == x[2][i]:
-            if x[0][i] != 0:
+            while x[0][i] != 0:
                 print(x[i][0], " wins bcs of row!")
                 break
             else:
                 continue
-            break
     else:
         print("Not in rows.")
-
 
 
 def check_diagonal(x):
@@ -68,15 +65,6 @@ def check_diagonal(x):
     else:
         print("Not in diagonal.")
 
-
-def check_all(x):
-    board = create_board(x)
-    check_line(board)
-    check_row(board)
-    check_diagonal(board)
-
-
-check_all(3)
 
 '''
     for i, val1 in np.ndenumerate(poss):
